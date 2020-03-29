@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">BugTracker</string>
+    <string name="title">Title:</string>
+    <string name="assignedTo">Assigned To:</string>
+    <string name="status">Status:</string>
+    <string name="add_bug">Add Bug</string>
+    <string name="add_title">Add Title</string>
+    <string name="add_description">Add Description</string>
+    <string name="submit">Submit</string>
+    <string name="delete">Delete</string>
+    <string name="assign">Assign</string>
+</resources>

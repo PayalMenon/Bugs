@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:id="@+id/bug_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardElevation="4dp"
+    card_view:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/bug_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/bug_assignedTo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            app:layout_constraintTop_toBottomOf="@id/bug_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/bug_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textSize="16sp"
+            android:tag="status"
+            android:textColor="@android:color/black"
+            app:layout_constraintTop_toBottomOf="@id/bug_assignedTo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Button
+            android:id="@+id/bug_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/delete"
+            android:textSize="16sp"
+            android:tag="delete"
+            android:textColor="@android:color/black"
+            app:layout_constraintTop_toBottomOf="@id/bug_status"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/bug_assign"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"/>
+
+        <Button
+            android:id="@+id/bug_assign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/assign"
+            android:tag="assign"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            app:layout_constraintTop_toBottomOf="@id/bug_status"
+            app:layout_constraintStart_toEndOf="@id/bug_delete"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
